@@ -1,0 +1,17 @@
+body {
+  background: rgb(204,204,204);
+  font-family: MS PGothic, sans-serif;
+
+}
+
+
+
+@media print {
+  body {
+
+    box-shadow: 0;
+
+
+}
+}
+

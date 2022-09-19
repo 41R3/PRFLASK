@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/CURRICULUM.css')}}" />
+    
+   
+    
+</head>
+
+<body>
+    
+    <form method="POST" action="{{url_for('procesar')}}">
+        <h1>Formulario CV</h1>
+        <p>Nombre y Apellidos:</p>
+        <input name="Nombre y Apellidos" required type="text" placeholder="">
+        <br><br>
+        <label for="fecha">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha" name="fecha">
+        <br><br>
+        <p>Ocupacion:</p>
+        <input name="Ocupacion" required type="text" placeholder="">
+        <br><br>
+        <p>Contacto(telefono,email):</p>
+        <input name="Contacto(telefono,email)" required type="text" placeholder="">
+        <br><br>
+        <label for="nacion">Nacionalidad:</label>
+        <br><br>
+        <select name="nacion" id="nacion" form="nacion">
+            <option value="Peruan@">Peruan@</option>
+            <option value="Argentin@">Argentin@</option>
+            <option value="Otro..">Otro...</option>
+
+        </select>
+        <br><br>
+
+        <p>Nivel de Ingles:</p>
+        <input type="radio" id="Basico" name="fav_language" value="Basico">
+        <label for="Basico">Basico</label><br>
+        <input type="radio" id="Intermedio" name="fav_language" value="Intermedio">
+        <label for="Intermedio">Intermedio</label><br>
+        <input type="radio" id="Avanzado" name="fav_language" value="Avanzado">
+        <label for="Avanzado">Avanzado</label><br>
+        <input type="radio" id="Fluido" name="fav_language" value="Fluido">
+        <label for="Fluido">Fluido</label>
+        <br><br>
+        <label for="lenguajes">Lenguajes de Programacion:</label>
+        <br><br>
+        <select multiple name="lenguajes" id="lenguajes" form="lenguajes">
+            <option value="CSS">CSS</option>
+            <option value="Javascript">Javascript</option>
+            <option value="Python">Python</option>
+            <option value="Ruby">Ruby</option>
+        </select>
+        <br><br>
+        <p>Aptitudes:</p>
+        <br>
+        <input list="aptitudes">
+        <datalist id="aptitudes">
+            <option value="Inteligencia">
+            <option value="Fuerza">
+            <option value="Espiritu">
+        </datalist>
+        <br><br>
+        <p>Habilidades:</p>
+        <input type="checkbox" id="habilidad1" name="habilidad1" value="habilidad1">
+        <label for="habilidad1"> Primera Hablidad</label><br>
+        <input type="checkbox" id="habilidad2" name="hablidad2" value="hablidad2">
+        <label for="habilidad2"> Segunda Habilidad</label><br>
+        <br><br>
+        <p>Perfil:</p>
+        <br>
+        <textarea name="perfil" style="width:250px; height:200px;">Trabajador Social con 4 años de Experiencia...
+                  </textarea>
+        <br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+
+
+</html>
+
+
